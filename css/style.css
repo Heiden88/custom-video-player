@@ -50,6 +50,16 @@ h1 {
   border-top: 12px solid transparent;
   left: 15px;
   position: relative;
+  transition-duration: .25s;
+}
+
+.active {
+  border: solid #fff;
+  border-width: 0 10px;
+  border-radius: 2px;
+  height: 24px;
+  margin-right: 1px;
+  width: 3px;
 }
 
 .panel__switch:hover { cursor: pointer; }
@@ -82,6 +92,7 @@ h1 {
 }
 
 .panel__time {
-  height: 100%;
+  color: #fdf9bf;
+  height: 41%;
   width: 50px;
 }
