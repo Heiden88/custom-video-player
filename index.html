@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = 'en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset = 'UTF-8'>
+  <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
   <title>Custom Video Player</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap" rel="stylesheet">
+  <link rel = 'stylesheet' href = './css/style.css'>
+  <link rel = 'preconnect' href = 'https://fonts.gstatic.com'>
+  <link href = 'https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap' rel = 'stylesheet'>
 </head>
 <body>
   <section class = 'section'>
     <h1 class = 'section__title'>Custom Video Player</h1>
     <div class = 'section__player player'>
-      <video src = './video/winter.mp4' class = 'player__screen' poster = './img/button-play.png'></video>
+      <video src = './video/sea.mp4' class = 'player__screen' poster = './img/button-play.png'></video>
       <div class = 'player__panel panel'>
         <span class = 'panel__switch'></span>
+        <div class = 'panel__mixer mixer'>
+          <object class = 'mixer__icon' type = 'image/svg+xml' data = './icon-volume.svg'>
+            <img src='./icon-volume.svg' width='24' height='24' alt='icon-volume' />
+          </object>
+          <input type = 'range' class = 'mixer__volume' min = '0' max = '10'>
+        </div>
         <input type = 'range' class = 'panel__slider' value = '0'>
         <span class = 'panel__time'>00:00</span>
       </div>

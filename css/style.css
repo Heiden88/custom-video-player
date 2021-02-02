@@ -48,7 +48,7 @@ h1 {
   border-bottom: 12px solid transparent;
   border-left: 24px solid #19883aeb;
   border-top: 12px solid transparent;
-  left: 15px;
+  left: 10px;
   position: relative;
   transition-duration: .25s;
 }
@@ -64,17 +64,66 @@ h1 {
 
 .panel__switch:hover { cursor: pointer; }
 
+.panel__mixer {
+  align-items: center;
+  display: flex;
+  left: 10px;
+  position: relative;
+  width: 10%;
+}
+
+.mixer__icon {
+  height: 24px;
+  width: 24px;
+}
+
+.mixer_active::after {
+  border-left: 2px solid #fdf9bf;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 12px;
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.mixer__volume,
 .panel__slider {
   appearance: none;
   background-color: #fdf9bf;
   border-radius: 4px;
   cursor: pointer;
-  height: 10px;
-  left: 8px;
   outline: none;
   position: relative;
-  width: 87%;
   -webkit-appearance: none;
+}
+
+.mixer__volume {
+  height: 5px;
+  left: 4px;
+  position: relative;
+  width: 57%;
+}
+
+.mixer__volume::-webkit-slider-thumb {
+  appearance: none;
+  background-color: #2657c0;
+  border-radius: 4px;
+  height: 9px;
+  width: 8px;
+  -webkit-appearance: none;
+}
+
+.mixer__volume::-moz-range-thumb {
+  background-color: #2657c0;
+  border-radius: 4px;
+  height: 16px;
+  width: 5px;
+}
+
+.panel__slider {
+  height: 8px;
+  width: 76%;
 }
 
 .panel__slider::-webkit-slider-thumb {
@@ -94,5 +143,5 @@ h1 {
 .panel__time {
   color: #fdf9bf;
   height: 41%;
-  width: 50px;
+  width: 63px;
 }
